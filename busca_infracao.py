@@ -5,7 +5,7 @@ def busca_infracao(infracao):
     all_arr = []
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(executable_path="C:\Program Files\Google\Chrome\Application\chrome.exe", headless=False)
+        browser = p.chromium.launch(executable_path="C:\Program Files\Google\Chrome\Application\chrome.exe", headless=True)
         page = browser.new_page()
         page.goto("https://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/infracoes/servicos/consultaTabelaInfracoes")
         
